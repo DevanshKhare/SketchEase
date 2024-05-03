@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${workSans.className} bg-primary-grey-200`}>
         <Room>
-        {children}
+          {children}
         </Room>
         </body>
     </html>
