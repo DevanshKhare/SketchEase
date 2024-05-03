@@ -1,6 +1,8 @@
 
 export default function Page() {
   return (
-      <h1 className="text-5xl text-white">aa</h1>
+    <div className="h-[100vh] w-full flex justify-center items-center text-center">
+      <h1 className="text-2xl text-white">aa</h1>
+    </div>
   );
 }
