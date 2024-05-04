@@ -23,7 +23,7 @@ const CursorChat = ({
         previousMessage: cursorState?.message,
         message: "",
       });
-    } else if (e.key === "Escape") {
+    } else if (e.key === "Escape") { // this can be removed as we are already handling it from live.tsx
       setCursorState({
         mode: CursorMode.Hidden,
       });
