@@ -38,7 +38,7 @@ const Live = () => {
       broadcast({
         x: cursor.x,
         y: cursor.y,
-        reaction: cursorState.reaction,
+        value: cursorState.reaction,
       })
     }
   }, 100);
@@ -55,6 +55,7 @@ const Live = () => {
       ])
     );
   });
+
   const handlePointerMove = useCallback((event: React.PointerEvent) => {
     event.preventDefault();
     if (cursor == null || cursorState.mode !== CursorMode.ReactionSelector) {
@@ -137,15 +138,15 @@ const Live = () => {
       className="h-[100vh] w-full flex justify-center items-center text-center"
     >
       <h1 className="text-2xl text-white">aa</h1>
-      {reactions.map((r) => (
-        <FlyingReaction
-          key={r.timestamp.toString()}
-          x={r.point.x}
-          y={r.point.y}
-          timestamp={r.timestamp}
-          value={r.value}
-        />
-      ))}
+        {reactions.map((reaction) => (
+          <FlyingReaction
+            key={reaction.timestamp.toString()}
+            x={reaction.point.x}
+            y={reaction.point.y}
+            timestamp={reaction.timestamp}
+            value={reaction?.value}
+          />
+        ))}
       {cursor && (
         <CursorChat
           cursor={cursor}
