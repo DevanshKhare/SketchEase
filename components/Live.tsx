@@ -1,11 +1,17 @@
 import { useCallback, useEffect, useState } from "react";
 import LiveCursors from "./cursor/LiveCursors";
-import { useBroadcastEvent, useEventListener, useMyPresence, useOthers } from "@/liveblocks.config";
+import {
+  useBroadcastEvent,
+  useEventListener,
+  useMyPresence,
+  useOthers,
+} from "@/liveblocks.config";
 import CursorChat from "./cursor/CursorChat";
 import { CursorMode, CursorState, Reaction, ReactionEvent } from "@/types/type";
 import ReactionSelector from "./reaction/ReactionButton";
 import FlyingReaction from "./reaction/FlyingReaction";
 import useInterval from "@/hooks/useInterval";
+import ActiveUsers from "./users/ActiveUsers";
 
 const Live = () => {
   const others = useOthers();
@@ -19,6 +25,12 @@ const Live = () => {
   const [reactions, setReaction] = useState<Reaction[]>([]);
 
   const broadcast = useBroadcastEvent();
+
+  useInterval(() => {
+    setReaction((reactions) =>
+      reactions.filter((r) => r.timestamp > Date.now() - 4000)
+    );
+  }, 1000);
 
   useInterval(() => {
     if (
@@ -39,7 +51,7 @@ const Live = () => {
         x: cursor.x,
         y: cursor.y,
         value: cursorState.reaction,
-      })
+      });
     }
   }, 100);
 
@@ -138,15 +150,15 @@ const Live = () => {
       className="h-[100vh] w-full flex justify-center items-center text-center"
     >
       <h1 className="text-2xl text-white">aa</h1>
-        {reactions.map((reaction) => (
-          <FlyingReaction
-            key={reaction.timestamp.toString()}
-            x={reaction.point.x}
-            y={reaction.point.y}
-            timestamp={reaction.timestamp}
-            value={reaction?.value}
-          />
-        ))}
+      {reactions.map((reaction) => (
+        <FlyingReaction
+          key={reaction.timestamp.toString()}
+          x={reaction.point.x}
+          y={reaction.point.y}
+          timestamp={reaction.timestamp}
+          value={reaction?.value}
+        />
+      ))}
       {cursor && (
         <CursorChat
           cursor={cursor}
