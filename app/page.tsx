@@ -130,12 +130,12 @@ export default function Page() {
       activeObjectRef
     })
   },[canvasObjects])
-  
+
   return (
     <main className="h-screen overflow-hidden">
       <Navbar activeElement={activeElement} handleActiveElement={handleActiveElement}/>
       <section className="flex h-full flex-row">
-        <LeftSidebar/>
+        <LeftSidebar allShapes={Array.from(canvasObjects)}/>
         <Live canvasRef={canvasRef}/>
         <RightSidebar/>
       </section>
