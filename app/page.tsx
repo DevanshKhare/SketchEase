@@ -8,6 +8,8 @@ import { fabric } from "fabric"
 import { handleCanvasMouseDown, handleCanvasMouseUp, handleCanvasObjectModified, handleCanvaseMouseMove, handleResize, initializeFabric, renderCanvas } from "@/lib/canvas";
 import { ActiveElement } from "@/types/type";
 import { useMutation, useStorage } from "@/liveblocks.config";
+import { defaultNavElement } from "@/constants";
+import { handleDelete } from "@/lib/key-events";
 
 export default function Page() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -29,23 +31,41 @@ export default function Page() {
     canvasObject.set(objectId, shapeData)
   },[])
 
-  useEffect(()=>{
-    renderCanvas({
-      fabricRef,
-      canvasObjects,
-      activeObjectRef
-    })
-  },[canvasObjects])
+
 
   const [activeElement, setActiveElement] = useState({
     name: "",
     value: "",
     icon: ""
   })
+ 
+  const deleteAllShapes = useMutation(({storage})=>{
+    const canvasObjects = storage.get("canvasObjects");
+    if(!canvasObjects || canvasObjects.size === 0) return true;
+    for(const [key, value] of canvasObjects.entries()){
+      canvasObjects.delete(key)
+    }
+    return canvasObjects.size === 0;
+  },[])
+
+  const deleteShapeFromStorage = useMutation(({storage},objectId)=>{
+    const canvasObject = storage.get("canvasObjects");
+    canvasObject.delete(objectId)
+  },[])
 
   const handleActiveElement = (ele: ActiveElement) => {
     setActiveElement(ele);
     selectedShapeRef.current = ele?.value as string;
+    switch(ele?.value) {
+      case "reset":
+        deleteAllShapes();
+        fabricRef.current?.clear();
+        break;
+      case "delete":
+        handleDelete(fabricRef.current as any, deleteShapeFromStorage)
+        setActiveElement(defaultNavElement)
+        break;
+    }
   }
 
   useEffect(() => {
@@ -97,7 +117,19 @@ export default function Page() {
     window.addEventListener("resize", ()=> {
       handleResize({ fabricRef })
     })
+
+    return () => {
+      canvas.dispose();
+    }
   }, [])
+  
+  useEffect(()=>{
+    renderCanvas({
+      fabricRef,
+      canvasObjects,
+      activeObjectRef
+    })
+  },[canvasObjects])
   
   return (
     <main className="h-screen overflow-hidden">
