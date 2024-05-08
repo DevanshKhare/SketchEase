@@ -21,6 +21,7 @@ import { useMutation, useRedo, useStorage, useUndo } from "@/liveblocks.config";
 import { defaultNavElement } from "@/constants";
 import { handleDelete, handleKeyDown } from "@/lib/key-events";
 import { handleImageUpload } from "@/lib/shapes";
+import LeftSidebarv2 from "@/components/LeftSidebarv2";
 
 export default function Page() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -202,7 +203,9 @@ export default function Page() {
         }}
       />
       <section className="flex h-full flex-row">
-        <LeftSidebar allShapes={Array.from(canvasObjects)} />
+        {/* <LeftSidebar allShapes={Array.from(canvasObjects)} /> */}
+        <LeftSidebarv2 allShapes={Array.from(canvasObjects)} />
+
         <Live canvasRef={canvasRef} />
         <RightSidebar
           elementAttributes={elementAttributes}
