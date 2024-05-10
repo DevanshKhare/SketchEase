@@ -107,11 +107,11 @@ export type NavbarProps = {
 };
 
 export type ShapesMenuProps = {
-  item: {
-    name: string;
-    icon: string;
-    value: Array<ActiveElement>;
-  };
+  // item: {
+  //   name: string;
+  //   icon: string;
+  //   value: Array<ActiveElement>;
+  // };
   activeElement: any;
   handleActiveElement: any;
   handleImageUpload: any;

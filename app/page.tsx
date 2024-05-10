@@ -216,7 +216,12 @@ export default function Page() {
           activeObjectRef={activeObjectRef}
           syncShapeInStorage={syncShapeInStorage}
         />
-        <FloatingMenu/>
+        <FloatingMenu
+          activeElement={activeElement}
+          imageInputRef={imageInputRef}
+          handleActiveElement={handleActiveElement}
+          handleImageUpload={handleImageUpload}
+        />
       </section>
     </main>
   );
