@@ -40,11 +40,6 @@ export const navElements = [
     value: "select",
   },
   {
-    icon: "/assets/rectangle.svg",
-    name: "Rectangle",
-    value: shapeElements,
-  },
-  {
     icon: "/assets/text.svg",
     value: "text",
     name: "Text",
