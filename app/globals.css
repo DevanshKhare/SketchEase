@@ -50,7 +50,7 @@
 }
 
 .mainMenuOverlay .toggleMenu {
-    background-color: #65B5D0;
+    background-color: rgb(119, 82, 254);
     border: 1px solid #FFF;
     border-radius: 80px;
     width: 62px;
@@ -74,7 +74,7 @@
 
 .mainMenuOverlay.open .toggleMenu {
     top: 50%;
-    background-color: #2298C3;
+    background-color: rgb(119, 82, 254);
 }
 
 .mainMenuOverlay .itemMenuBox {
@@ -106,7 +106,7 @@
     display: inline-block;
     border: 2px solid rgba(255, 255, 255, 0.6);
     border-radius: 40px;
-    background-color: #1f97c2;
+    background-color: rgb(119, 82, 254);
     background-repeat: no-repeat;
     background-position: center center;
     width: 62px;

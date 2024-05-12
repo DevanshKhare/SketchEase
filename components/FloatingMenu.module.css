@@ -45,7 +45,7 @@ body {
 .mainMenuOverlay .toggleMenu {
     display: block;
     /*background: url(https://res.cloudinary.com/dioieuprs/image/upload/v1466688705/floating-menu/sandwich.png) no-repeat center center #65B5D0;background-size: 23px auto;*/
-    background-color: #65B5D0;
+    background-color: rgb(119, 82, 254);
     border: 1px solid #FFF;
     border-radius: 80px;
     width: 62px;
