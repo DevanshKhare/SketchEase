@@ -275,3 +275,30 @@
         -moz-transform: translate(0, -0px);
     }
 }
+.typing {
+    font-family: 'Inconsolata', Consolas, monospace;
+    font-size: 6vw;
+    color: #d7b94c;
+    position: relative;
+}
+.typing::after {
+        content: "|";
+        position: absolute;
+        right: 0;
+        width: 100%;
+        color: white;
+        background: #282A3A;
+        animation: typing 4s steps(18) forwards,
+            caret 1s infinite;
+    }
+@keyframes typing {
+    to {
+        width: 0
+    }
+}
+
+@keyframes caret {
+    50% {
+        color: transparent
+    }
+}
