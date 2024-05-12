@@ -28,7 +28,7 @@ const Navbar = ({ activeElement, imageInputRef, handleImageUpload, handleActiveE
               if (Array.isArray(item.value)) return;
               handleActiveElement(item);
             }}
-            className={`group px-2.5 py-5 flex justify-center items-center
+            className={`group px-2.5 py-5 flex justify-center items-center hover:cursor-pointer
             ${isActive(item.value) ? "bg-[#7752FE]" : "hover:bg-[#282A3A]"}
             `}
           >
