@@ -192,16 +192,6 @@ const CanvasRenderer =() => {
       <Navbar
         activeElement={activeElement}
         handleActiveElement={handleActiveElement}
-        imageInputRef={imageInputRef}
-        handleImageUpload={(e) => {
-          e.stopPropagation();
-          handleImageUpload({
-            file: e?.target?.files[0],
-            canvas: fabricRef as any,
-            shapeRef,
-            syncShapeInStorage,
-          });
-        }}
       />
       <section className="flex h-full flex-row">
         {/* <LeftSidebar allShapes={Array.from(canvasObjects)} /> */}
@@ -220,7 +210,15 @@ const CanvasRenderer =() => {
           activeElement={activeElement}
           imageInputRef={imageInputRef}
           handleActiveElement={handleActiveElement}
-          handleImageUpload={handleImageUpload}
+          handleImageUpload={(e:any) => {
+            e.stopPropagation();
+            handleImageUpload({
+              file: e?.target?.files[0],
+              canvas: fabricRef as any,
+              shapeRef,
+              syncShapeInStorage,
+          });
+        }}
         />
       </section>
     </main>
