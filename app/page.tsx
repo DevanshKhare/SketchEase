@@ -5,9 +5,9 @@ import MenuBar from '@/components/MenuBar'
 
 const page = () => {
   return (
-    <div className='h-screen pt-8 bg-zinc-950'>
-      <div className='border w-[90%] m-auto border-white h-full'>
-        <header className='h-[5rem] border flex text-white items-center justify-between px-4'>
+    <div className='h-screen pt-8 bg-zinc-950 absolute inset-0 -z-10 w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]'>
+      <div className='w-[90%] m-auto h-full'>
+        <header className='h-[5rem] flex text-white items-center justify-between px-4'>
             <div>
               <Image src="/logo.png" alt='logo' height={50} width={50}/>
             </div>
