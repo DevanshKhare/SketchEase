@@ -119,46 +119,6 @@
     text-align: center;
 }
 
-
-/* Hover
-.mainMenuOverlay .itemMenuBox.bills .itemMenu:hover {
-    -webkit-transform: rotate(450deg);
-    -ms-transform: rotate(450deg);
-    transform: rotate(450deg);
-}
-
-.mainMenuOverlay .itemMenuBox.tarsheed .itemMenu:hover {
-    -webkit-transform: rotate(390deg);
-    -ms-transform: rotate(390deg);
-    transform: rotate(390deg);
-}
-
-.mainMenuOverlay .itemMenuBox.employees .itemMenu:hover {
-    -webkit-transform: rotate(690deg);
-    -ms-transform: rotate(690deg);
-    transform: rotate(690deg);
-}
-
-.mainMenuOverlay .itemMenuBox.location .itemMenu:hover {
-    -webkit-transform: rotate(630deg);
-    -ms-transform: rotate(630deg);
-    transform: rotate(630deg);
-}
-
-.mainMenuOverlay .itemMenuBox.eservices .itemMenu:hover {
-    -webkit-transform: rotate(570deg);
-    -ms-transform: rotate(570deg);
-    transform: rotate(570deg);
-}
-
-.mainMenuOverlay .itemMenuBox.contact .itemMenu:hover {
-    -webkit-transform: rotate(510deg);
-    -ms-transform: rotate(510deg);
-    transform: rotate(510deg);
-} */
-
-
-
 .floating {
     -webkit-animation-name: Floatingx;
     -webkit-animation-duration: 3s;
