@@ -6,7 +6,7 @@ import { FaCircleArrowRight } from "react-icons/fa6";
 
 const page = () => {
   return (
-    <div className='h-screen pt-8 bg-zinc-950 absolute inset-0 -z-10 w-full items-center px-5 py-24'>
+    <div className='h-screen pt-8 bg-zinc-950 absolute inset-0 -z-10 w-full items-center px-5 py-24 [background:radial-gradient(150%_150%_at_50%_10%,#000_40%,#63e_100%)]'>
       <div className='w-[90%] m-auto '>
         <header className='h-[5rem] flex text-white items-center justify-between px-4'>
             <div>
