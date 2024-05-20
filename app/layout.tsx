@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${workSans.className} bg-[#282A3A]`}>
+      <body className={`${workSans.className} bg-zinc-950`}>
           {children}
         </body>
     </html>
