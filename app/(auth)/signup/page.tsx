@@ -8,7 +8,7 @@ const page = () => {
   return (
     <div className="flex bg-zinc-950 absolutex flex-row h-screen">
       <div className="h-full w-[50%] bg-zinc-100 text-zinc-950">
-        <div className="px-[8rem] h-full flex py-[5rem] flex-col gap-[2rem]">
+        <div className=" h-full flex py-[5rem] flex-col gap-[2rem] w-[60%] m-auto">
           <div className="h-[10rem]">
             <Image src="/logo.png" alt="logo" height={50} width={50} />
             <h1 className="text-[2.2rem] font-bold mt-3">Create Account</h1>
