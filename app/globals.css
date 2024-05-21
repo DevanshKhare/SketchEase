@@ -260,3 +260,15 @@
         color: transparent
     }
 }
+
+.divider{
+    display: flex;
+    flex-direction: row;
+}
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid #d1d1db;
+    margin: auto 8px;
+}

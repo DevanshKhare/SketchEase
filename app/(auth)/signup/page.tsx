@@ -20,17 +20,18 @@ const page = () => {
           <div className="flex flex-col gap-3">
             <Button
               variant="outline"
-              className="border-zinc-300 hover:bg-zinc-200"
+              className="border-zinc-400 hover:bg-zinc-200"
             >
               <FcGoogle className="mr-2 h-4 w-4" /> Login with Email
             </Button>{" "}
             <Button
               variant="outline"
-              className="border-zinc-300 hover:bg-zinc-200"
+              className="border-zinc-400 hover:bg-zinc-200"
             >
               <FaGithub className="mr-2 h-4 w-4" /> Login with Email
             </Button>
           </div>
+            <p className="divider text-[0.8rem] font-bold">OR</p>
         </div>
       </div>
       <div className="h-full w-[50%]">
