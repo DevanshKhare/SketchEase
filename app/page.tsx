@@ -40,10 +40,12 @@ const page = () => {
           <br />
           Blasting Speed and Elevate SEO and Performance.
         </p>
+        <Link href="/signup">
         <Button className="mt-4 bg-[#63e] rounded-full">
           <FaCircleArrowRight fontSize={20} />
           &nbsp;&nbsp;Start Designing - Free
         </Button>
+        </Link>
         <p className="text-center mt-3 text-zinc-700">
           No credit card required
         </p>
