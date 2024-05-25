@@ -23,14 +23,14 @@ const page = () => {
               variant="outline"
               className="border-zinc-400 hover:bg-zinc-200"
             >
-              <FcGoogle className="mr-2 h-4 w-4" /> Login with Email
+              <FcGoogle className="mr-2 h-4 w-4" /> Login with Gmail
             </Button>{" "}
-            <Button
+            {/* <Button
               variant="outline"
               className="border-zinc-400 hover:bg-zinc-200"
             >
               <FaGithub className="mr-2 h-4 w-4" /> Login with Email
-            </Button>
+            </Button> */}
           </div>
             <p className="divider text-[0.8rem] font-bold">OR</p>
             <RegisterationForm/>
