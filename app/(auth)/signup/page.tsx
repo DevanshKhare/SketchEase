@@ -12,7 +12,7 @@ const page = () => {
         <div className=" h-full flex py-[2rem] flex-col gap-[2rem] w-[60%] m-auto">
           <div className="h-[10rem]">
             <Image src="/logo.png" alt="logo" height={50} width={50} />
-            <h1 className="text-[2.2rem] font-bold mt-3">Create Account</h1>
+            <h1 className="text-[2.2rem] font-bold mt-3">Get Started</h1>
             <p className="text-zinc-500">
               Sign up toady and unlock a world of possibilities. Your adventure
               begings here.
@@ -23,14 +23,14 @@ const page = () => {
               variant="outline"
               className="border-zinc-400 hover:bg-zinc-200"
             >
-              <FcGoogle className="mr-2 h-4 w-4" /> Login with Email
+              <FcGoogle className="mr-2 h-4 w-4" /> Login with Gmail
             </Button>{" "}
-            <Button
+            {/* <Button
               variant="outline"
               className="border-zinc-400 hover:bg-zinc-200"
             >
               <FaGithub className="mr-2 h-4 w-4" /> Login with Email
-            </Button>
+            </Button> */}
           </div>
             <p className="divider text-[0.8rem] font-bold">OR</p>
             <RegisterationForm/>

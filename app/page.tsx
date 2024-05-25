@@ -3,6 +3,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import MenuBar from "@/components/MenuBar";
 import { FaCircleArrowRight } from "react-icons/fa6";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -16,12 +17,14 @@ const page = () => {
             <MenuBar />
           </div>
           <div>
+            <Link href="/signup">
             <Button
               variant="outline"
               className="rounded-[4rem] border-zinc-900 border-[2px] hover:bg-zinc-900"
-            >
+              >
               Sign Up
             </Button>
+              </Link>
           </div>
         </header>
       </div>
@@ -37,10 +40,12 @@ const page = () => {
           <br />
           Blasting Speed and Elevate SEO and Performance.
         </p>
+        <Link href="/signup">
         <Button className="mt-4 bg-[#63e] rounded-full">
           <FaCircleArrowRight fontSize={20} />
           &nbsp;&nbsp;Start Designing - Free
         </Button>
+        </Link>
         <p className="text-center mt-3 text-zinc-700">
           No credit card required
         </p>
