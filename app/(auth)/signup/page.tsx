@@ -12,7 +12,7 @@ const page = () => {
         <div className=" h-full flex py-[2rem] flex-col gap-[2rem] w-[60%] m-auto">
           <div className="h-[10rem]">
             <Image src="/logo.png" alt="logo" height={50} width={50} />
-            <h1 className="text-[2.2rem] font-bold mt-3">Create Account</h1>
+            <h1 className="text-[2.2rem] font-bold mt-3">Get Started</h1>
             <p className="text-zinc-500">
               Sign up toady and unlock a world of possibilities. Your adventure
               begings here.
